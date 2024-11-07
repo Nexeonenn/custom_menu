@@ -1,11 +1,5 @@
 # Garry's Mod | Custom Menu
 
-### Изменения:
-
-- Тёмная версия всего главного меню и этапа захода в игру.
-- Убраны редко используемые вкладки(при желании их можно вернуть).
-- Расширен выбор режимов в сетевом режиме.
-
 ## Скриншоты
 
 ![](https://raw.githubusercontent.com/Nexeonenn/custom_menu/refs/heads/main/screenshots/startup.png)
