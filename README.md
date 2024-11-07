@@ -1,6 +1,6 @@
 # Garry's Mod | Custom Menu
 
-### Как установить?:
+### Как установить?
 
 - Скачиваем [релизную версию](https://github.com/Nexeonenn/custom_menu/releases) меню.
 - Дальше переходим в конренвую папку Garry's Mod.
