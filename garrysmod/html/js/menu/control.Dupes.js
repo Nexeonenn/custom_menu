@@ -1,4 +1,3 @@
-
 dupe = new WorkshopFiles();
 
 function ControllerDupes($scope, $rootScope, $location, $timeout, $routeParams)
@@ -94,7 +93,7 @@ function ControllerDupes($scope, $rootScope, $location, $timeout, $routeParams)
 
 	// This is just to fix the spawnmenu initial size being 512x512 for first few frames
 	$scope.ReloadView();
-	$( window ).resize( function() {
+	window.addEventListener( 'resize', function() {
 		//if ( $scope.ResizeTimeout ) $timeout.cancel( $scope.ResizeTimeout );
 		//$scope.ResizeTimeout = $timeout( function() { $scope.ReloadView(); }, 250 );
 

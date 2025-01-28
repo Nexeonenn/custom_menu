@@ -1,5 +1,5 @@
 
-	<div class="page" ng-controller="ControllerServers">
+	<div class="page server_browser" ng-controller="ControllerServers">
 
 		<div class="options">
 
@@ -16,6 +16,10 @@
 				<li ng-show="( CurrentGamemode == null && Refreshing[ ServerType ] == 'false' ) || (Refreshing[ ServerType ] == 'true')">&nbsp;</li>
 				<li ng-hide="CurrentGamemode != null || Refreshing[ ServerType ] == 'true'"><a ng-tranny="'servers_refresh'" ng-click="Refresh()">refresh</a></li>
 				<li ng-hide="Refreshing[ ServerType ] == 'false'"><a ng-tranny="'servers_stoprefresh'" ng-click="DoStopRefresh()">Stop refresh</a></li>
+				<!--
+				<li>&nbsp;</li>
+				<li><a ng-click="MenuOption( this, 'OpenServerBrowser')" ng-tranny="'legacy_browser'"></a></li>
+				-->
 				<li>&nbsp;</li>
 				<li class="sb_filter_sep"></li>
 				<li class="sb_filters" ng-hide="CurrentGamemode != null">
@@ -42,7 +46,7 @@
 					<input type="checkbox" id="sv_nopass" ng-model="SVFilterHidePass"/><label for="sv_nopass" ng-tranny="'svfltr_no_password'"></label> <img class="passworded" src='img/server-passworded.png'/>
 
 					<div class="flags_filter" ng-show="CurrentGamemode.hasflags">
-						<img ng-repeat="(flag, whatever) in CurrentGamemode.flags" class="flag {{FilterFlagClass( flag )}}" src='asset://garrysmod/materials/flags16/{{flag}}.png' ng-click="FilterFlag( flag, this );" onerror="MissingFlag( this )"/>
+						<img ng-repeat="(flag, whatever) in CurrentGamemode.flags" class="flag {{FilterFlagClass( flag )}}" src='asset://garrysmod/materials/flags16/{{flag}}.png' ng-click="FilterFlag( flag, this );" onerror="MissingFlag( this )" loading="lazy"/>
 					</div>
 				</li>
 			</ul>
@@ -50,7 +54,7 @@
 		</div>
 
 		<div class="innerpage" ng-hide="CurrentGamemode != null">
-			<!---
+			<!--
 			<h1 class="menuheader">
 				<span ng-tranny="'servers_gamemodes'"></span>
 				<small ng-tranny="'servers_gamemodes.subtitle'"></small>
@@ -130,8 +134,8 @@
 
 						<name>
 							<a class='favbutton {{IfElse( server.favorite, "favorited", "" )}}' ng-click="ToggleFavorite( server );$event.stopPropagation();"></a>
-							<img class="flag" src='asset://garrysmod/materials/flags16/{{server.flag}}.png' onerror="MissingFlag( this )" ng-show="server.flag"/>
-							<img class="passworded" src='img/server-passworded.png' ng-show="server.pass"/>
+							<img class="flag" src='asset://garrysmod/materials/flags16/{{server.flag}}.png' onerror="MissingFlag( this )" ng-show="server.flag" loading="lazy"/>
+							<img class="passworded" src='img/server-passworded.png' ng-show="server.pass" loading="lazy"/>
 							<span>{{ServerName(server)}}
 								<tag class="{{IfElse( server.version_c > 0, 'future', '' )}}" ng-show="server.version_c != 0">{{IfElse( server.version_c > 0, 'Invalid version', 'Outdated' )}}: {{server.version}}</tag>
 							</span>

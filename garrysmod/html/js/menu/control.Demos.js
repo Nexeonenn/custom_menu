@@ -1,4 +1,3 @@
-
 demo = new WorkshopFiles();
 
 function ControllerDemos( $scope, $element, $rootScope, $location )
