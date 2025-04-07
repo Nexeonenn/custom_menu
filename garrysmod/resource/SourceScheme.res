@@ -50,11 +50,11 @@ Scheme
 
 		Button.TextColor				"240 240 240 255"
 		Button.BgColor					"45 45 48 50"
-		Button.ArmedTextColor			"0 122 204 255"
+		Button.ArmedTextColor			"255 255 255 255" // 0 122 204
 		Button.ArmedBgColor				"62 62 64 255"	[$WIN32]
 		Button.ArmedBgColor				"62 62 64 255"		[$X360]
 		Button.DepressedTextColor		"18 18 18 255"
-		Button.DepressedBgColor			"0 122 204 255"
+		Button.DepressedBgColor			"255 255 255 255" // 0 122 204
 		Button.FocusBorderColor			"Blank"
 
 		CheckButton.TextColor			"240 240 240 255"
@@ -64,13 +64,13 @@ Scheme
 		CheckButton.Border2				"Border.Subtle"		// the right checkbutton border
 		CheckButton.Check				"60 60 62 255" // color of the check itself
 		CheckButton.DisabledFgColor		"Black"	// color of the check itself when disabled
-		CheckButton.HighlightFgColor	"0 122 204 255"
+		CheckButton.HighlightFgColor	"255 255 255 255"
 		CheckButton.ArmedBgColor		"Blank"
 		CheckButton.DepressedBgColor	"Blank"
 		CheckButton.DisabledBgColor		"180 180 180 255"
 
-		ComboBoxButton.ArrowColor		"0 122 204 255"
-		ComboBoxButton.ArmedArrowColor	"0 60 255 255"
+		ComboBoxButton.ArrowColor		"255 255 255 255"
+		ComboBoxButton.ArmedArrowColor	"150 150 150 255"
 		ComboBoxButton.BgColor			"GMod_WhiteBlank"
 		ComboBoxButton.DisabledBgColor	"GMod_WhiteBlank"
 
@@ -97,12 +97,12 @@ Scheme
 		FrameSystemButton.DisabledIcon	""
 		FrameTitleBar.Font				"UiBold"		[$WIN32]
 		FrameTitleBar.Font				"DefaultLarge"	[$X360]
-		FrameTitleBar.TextColor			"0 122 204 204"
+		FrameTitleBar.TextColor			"255 255 255 204"
 		FrameTitleBar.BgColor			"GMod_BG"
-		FrameTitleBar.DisabledTextColor	"0 122 204 91"
+		FrameTitleBar.DisabledTextColor	"255 255 255 91"
 		FrameTitleBar.DisabledBgColor	"GMod_BG"
 
-		GraphPanel.FgColor				"0 122 204 255"
+		GraphPanel.FgColor				"255 255 255 255"
 		GraphPanel.BgColor				"17 17 17 150"
 
 		Label.TextDullColor				"190 190 190 255"
@@ -116,7 +116,7 @@ Scheme
 		ListPanel.TextColor					"240 240 240 255"
 		ListPanel.TextBgColor				"Blank"
 		ListPanel.BgColor					"12 12 12 50"
-		ListPanel.SelectedTextColor			"0 122 204 255"
+		ListPanel.SelectedTextColor			"255 255 255 255"
 		ListPanel.SelectedBgColor			"50 50 50 204"
 		ListPanel.OutOfFocusSelectedTextColor	"Black"
 		ListPanel.SelectedOutOfFocusBgColor		"132 183 241 100"
@@ -124,14 +124,14 @@ Scheme
 
 		Menu.TextColor					"240 240 240 255"
 		Menu.BgColor					"25 25 28 50"
-		Menu.ArmedTextColor				"0 122 204 255"
+		Menu.ArmedTextColor				"255 255 255 255"
 		Menu.ArmedBgColor				"40 40 42 255"
 		Menu.TextInset					"6"
 
 		Panel.FgColor					"DullWhite"
 		Panel.BgColor					"GMod_BG"
 
-		ProgressBar.FgColor				"0 122 204 255"
+		ProgressBar.FgColor				"255 255 255 255"
 		ProgressBar.BgColor				"12 12 12 50"
 
 		PropertySheet.TextColor				"240 240 240 240"
@@ -141,12 +141,12 @@ Scheme
 		PropertySheet.BgColor				"37 37 37 50"
 
 		RadioButton.TextColor			"240 240 240 240"
-		RadioButton.SelectedTextColor	"0 122 204 255"
+		RadioButton.SelectedTextColor	"255 255 255 255"
 
 		// Console
 		RichText.TextColor				"210 210 210 255"
 		RichText.BgColor				"12 12 12 150"
-		RichText.SelectedTextColor		"0 122 204 255"
+		RichText.SelectedTextColor		"255 255 255 255"
 		RichText.SelectedBgColor		"20 20 20 150"
 
 		ScrollBar.Wide					15
@@ -161,16 +161,16 @@ Scheme
 		ScrollBarSlider.FgColor				"46 46 48 255"			// nob color
 		ScrollBarSlider.BgColor				"29 29 31 255"	// slider background color
 
-		SectionedListPanel.HeaderTextColor	"0 122 204 255"
+		SectionedListPanel.HeaderTextColor	"255 255 255 255"
 		SectionedListPanel.HeaderBgColor	"Blank"
 		SectionedListPanel.DividerColor		"0 0 0 150"
 		SectionedListPanel.TextColor		"Button.FgColor"
 		SectionedListPanel.BrightTextColor	"White"
 		SectionedListPanel.BgColor			"17 17 17 50"
 		SectionedListPanel.SelectedTextColor			"18 18 18 255"
-		SectionedListPanel.SelectedBgColor				"0 122 204 50"
+		SectionedListPanel.SelectedBgColor				"255 255 255 50"
 		SectionedListPanel.OutOfFocusSelectedTextColor	"18 18 18 230"
-		SectionedListPanel.OutOfFocusSelectedBgColor	"0 122 204 60"
+		SectionedListPanel.OutOfFocusSelectedBgColor	"255 255 255 60"
 
 		Slider.NobColor				"46 46 48 255"
 		Slider.TextColor			"Label.TextColor"
@@ -180,7 +180,7 @@ Scheme
 
 		TextEntry.TextColor			"Label.TextColor"
 		TextEntry.BgColor			"33 33 33 50"
-		TextEntry.CursorColor		"0 122 204 240"
+		TextEntry.CursorColor		"255 255 255 240"
 		TextEntry.DisabledTextColor	"DullWhite"
 		TextEntry.DisabledBgColor	"192 192 192 50"
 		TextEntry.SelectedTextColor	"10 10 10 50"
