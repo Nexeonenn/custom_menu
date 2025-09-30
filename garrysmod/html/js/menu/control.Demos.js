@@ -1,3 +1,4 @@
+
 demo = new WorkshopFiles();
 
 function ControllerDemos( $scope, $element, $rootScope, $location )
@@ -63,8 +64,8 @@ function ControllerDemos( $scope, $element, $rootScope, $location )
 
 	$scope.DeleteLocal = function ( entry )
 	{
-		lua.Run( "file.Delete( %s, \"MOD\" )", entry.info.file );
-		lua.Run( "file.Delete( %s, \"MOD\" )", entry.background );
+		gmod.DeleteLocal( entry.info.file );
+		gmod.DeleteLocal( entry.background );
 
 		$scope.Switch( $scope.Category, $scope.Offset );
 	}

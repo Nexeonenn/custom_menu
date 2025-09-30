@@ -1,86 +1,32 @@
-
-#NavBar
-{
+#NavBar {
 	position: absolute;
 	bottom: 0px;
 	height: 50px;
 	left: 0;
 	right: 0;
-	background-color: rgba( 0, 0, 0, 0.5 );
+	background-color: rgba(0, 0, 0, 0.5);
+	display: -webkit-box;
 }
 
-#NavBar UL
-{
-	display: block;
-	margin: 0;
-	padding: 0;
+#NavBar .group {
+	display: -webkit-box;
 }
 
-#NavBar .left
-{
-	text-align: left;
-	margin-left: 10px;
-	float: left;
-	display: block;
-	margin: 0;
-	padding: 0;
+#NavBar .group.left {
+	padding-left: 5px;
 }
 
-#NavBar .right
-{
-	float: right;
-	text-align: right;
-	/*width: 350px;*/
-	right: 0;
-	display: block;
-	margin: 0;
-	padding: 0;
-	margin-left: 10%;
+#NavBar .group.center {
+	-webkit-box-pack: end;
+	-webkit-box-flex: 1;
+	margin: 0 10%;
 }
 
-#NavBar .smallicon
-{
-	min-width: 40px;
-	padding: 0;
-	text-align: center;
-}
-#NavBar .smallicon.hidelabel span
-{
-	padding-left: 35px;
-}
 
-#NavBar .smallicon img
-{
-	margin-top: 7px;
-	margin-left: 7px;
-}
-
-#NavBar .bigicon
-{
-	min-width: 5px;
-}
-
-#NavBar .bigicon img
-{
-	margin-top: -1px;
-	margin-left: -1px;
-}
-
-#NavBar UL.center
-{
-	text-align: center;
-	left: 0;
-	right: 0;
-}
-
-#NavBar .right li:hover, #NavBar .center li:hover
-{
-	box-shadow: 0px 0px 20px #fff;
-}
-
-#NavBar LI, UL.popup LI, #NavBar .button
-{
+#NavBar .button,
+UL.popup LI {
 	display: inline-block;
+	box-sizing: border-box;
 	background-color: #111;
 	border-radius: 4px;
 	height: 40px;
@@ -95,38 +41,40 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-}
-
-#NavBar .button
-{
-	display: block;
-	padding: 4px 5px 0px 5px;
-	height: 36px;
-	margin-left: 5px;
 	vertical-align: top;
 }
 
-#NavBar .button:hover
-{
-	box-shadow: 0px 0px 20px #fff;
+#NavBar .button:hover {
+	box-shadow: 0px 0px 10px #fff;
 }
 
-#NavBar .button span
-{
-	position: relative;
-	top: -12px;
-	padding: 0px 10px;
-	color: #DDD;
+#NavBar .smallicon {
+	min-width: 40px;
+	padding: 0;
+	text-align: center;
 }
 
-#NavBar LI
-{
-	display: block;
-	float: right;
+#NavBar .smallicon.hidelabel span {
+	padding-left: 35px;
 }
 
-#NavBar LI SPAN, UL.gamemode_list LI SPAN, UL.language_list LI SPAN
-{
+#NavBar .smallicon img {
+	margin-top: 7px;
+	margin-left: 7px;
+}
+
+#NavBar .bigicon {
+	min-width: 5px;
+}
+
+#NavBar .bigicon img {
+	margin-top: -1px;
+	margin-left: -1px;
+}
+
+#NavBar .button SPAN,
+UL.gamemode_list LI SPAN,
+UL.language_list LI SPAN {
 	color: #DDD;
 	position: relative;
 	top: 13px;
@@ -134,15 +82,29 @@
 	padding-right: 10px;
 }
 
-#NavBar LI IMG, UL.gamemode_list LI IMG, UL.language_list LI IMG
-{
+#NavBar .button IMG,
+UL.gamemode_list LI IMG,
+UL.language_list LI IMG {
 	position: absolute;
 	left: 5px;
 	top: 5px;
 }
 
-#NavBar number
-{
+#NavBar #BackToMenu {
+	padding-right: 5px;
+}
+
+#NavBar #BackToMenu SPAN {
+	top: 14px;
+	margin-left: 2px;
+}
+
+#NavBar #BackToMenu IMG {
+	margin-left: 0px;
+	margin-top: -1px;
+}
+
+#NavBar number {
 	background: #d9d9d9;
 	padding: 5px;
 	position: absolute;
@@ -151,19 +113,16 @@
 	border-radius: 4px;
 }
 
-#NavBar number.severity1
-{
+#NavBar number.severity1 {
 	background: #ffc800;
 }
 
-#NavBar number.severity2
-{
+#NavBar number.severity2 {
 	background: #ff4000;
 	color: white;
 }
 
-UL.games_list
-{
+UL.games_list {
 	right: 150px;
 	width: 260px;
 	overflow: auto;
@@ -172,8 +131,15 @@ UL.games_list
 	border: 3px solid #333;
 }
 
-UL.games_list LI
-{
+ul.games_list .popup .open {
+	display: flex;
+	flex-direction: column;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+}
+
+UL.games_list LI {
 	padding: 0;
 	height: 20px;
 	line-height: inherit;
@@ -188,47 +154,47 @@ UL.games_list LI
 	color: #DDD;
 }
 
-UL.games_list LI:last-child
-{
+UL.games_list LI:last-child {
 	margin-bottom: 0px;
 }
 
-UL.games_list LI span
-{
+UL.games_list LI span {
 	position: absolute;
 	left: 25px;
 	right: 22px;
 	top: 3px;
 }
 
-UL.games_list LI IMG
-{
+UL.games_list LI IMG {
 	position: absolute;
 	left: 2px;
 	top: 2px;
 }
 
-UL.games_list LI.notinstalled
-{
+.game-item.notowned,
+.game-item.notinstalled {
+	order: 2;
 	opacity: 0.7;
 	cursor: default;
 }
 
-UL.games_list LI.notowned
-{
-	opacity: 0.7;
-	cursor: default;
+UL.games_list>.notowned,
+UL.games_list>.notinstalled,
+UL.games_list>hr {
+	order: 1;
 }
 
-UL.gamemode_list
-{
+.game-item:not(.notowned):not(.notinstalled) {
+	order: 0;
+}
+
+UL.gamemode_list {
 	overflow: auto;
 	max-height: 80%;
 	border: 3px solid #333;
 }
 
-UL.gamemode_list LI
-{
+UL.gamemode_list LI {
 	display: inherit;
 	margin: 3px;
 	border-radius: 0;
@@ -236,24 +202,20 @@ UL.gamemode_list LI
 	margin: 0 2px 2px 0;
 }
 
-UL.gamemode_list LI:hover
-{
+UL.gamemode_list LI:hover {
 	background-color: #444;
 }
 
-UL.gamemode_list LI:first-child
-{
+UL.gamemode_list LI:first-child {
 	border-radius: 3px 3px 0 0;
 }
 
-UL.gamemode_list LI:last-child
-{
+UL.gamemode_list LI:last-child {
 	margin-bottom: 0;
 	border-radius: 0 0 3px 3px;
 }
 
-UL.language_list
-{
+UL.language_list {
 	right: 100px;
 	background-color: #222;
 	text-align: center;
@@ -261,8 +223,7 @@ UL.language_list
 	padding-bottom: 4px;
 }
 
-UL.language_list LI
-{
+UL.language_list LI {
 	display: inline-block;
 	width: 26px;
 	height: 24px;
@@ -270,32 +231,27 @@ UL.language_list LI
 	background-color: transparent;
 }
 
-UL.language_list LI IMG
-{
+UL.language_list LI IMG {
 	border: 1px solid #444;
 }
 
-UL.language_list LI:hover
-{
+UL.language_list LI:hover {
 	background-color: #444;
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
 	width: 8px;
 	height: 8px;
-	background-color: rgb( 250, 250, 250 );
+	background-color: rgb(250, 250, 250);
 	border-radius: 1px;
 }
 
-::-webkit-scrollbar-thumb
-{
-	background-color: rgb( 180, 180, 180);
+::-webkit-scrollbar-thumb {
+	background-color: rgb(180, 180, 180);
 	border-radius: 2px;
 }
 
-.popup
-{
+.popup {
 	position: absolute;
 	bottom: 50px;
 	right: 10px;
@@ -310,18 +266,15 @@ UL.language_list LI:hover
 	display: none;
 }
 
-UL.games_list.popup LI
-{
+UL.games_list.popup LI {
 	cursor: default;
 }
 
-.popup HR
-{
+.popup HR {
 	margin-right: 2px;
 }
 
-.kinect_settings
-{
+.kinect_settings {
 	right: 150px;
 	width: 230px;
 	overflow: auto;
@@ -330,8 +283,7 @@ UL.games_list.popup LI
 	border: 3px solid #333;
 }
 
-.kinect_settings LI
-{
+.kinect_settings LI {
 	display: block !important;
 	margin: 0 !important;
 	height: auto !important;
@@ -339,14 +291,12 @@ UL.games_list.popup LI
 }
 
 /* 800x600 and lower */
-@media (max-width: 940px)
-{
-	#NavBar .hidelabel span
-	{
+@media (max-width: 940px) {
+	#NavBar .hidelabel span {
 		display: none;
 	}
-	#NavBar .right
-	{
+
+	#NavBar .group.center {
 		margin-left: 15px;
 	}
 }

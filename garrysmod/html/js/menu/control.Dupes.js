@@ -1,3 +1,4 @@
+
 dupe = new WorkshopFiles();
 
 function ControllerDupes($scope, $rootScope, $location, $timeout, $routeParams)

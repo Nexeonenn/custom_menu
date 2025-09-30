@@ -1,5 +1,4 @@
-workshopicon
-{
+workshopicon {
 	width: 200px;
 	height: 200px;
 	display: inline-block;
@@ -8,20 +7,18 @@ workshopicon
 	overflow: hidden;
 	background-color: #333;
 	background-position: center;
-	-webkit-box-shadow: 0px 0px 1px 1px rgba( 0, 0, 0, 0.3 );
+	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
 	border-radius: 3px;
 	border: 3px solid #666;
 }
 
-workshopicon preview
-{
+workshopicon preview {
 	position: absolute;
 	left: 50%;
 	top: 50%;
 }
 
-workshopicon disabled
-{
+workshopicon disabled {
 	opacity: 0;
 
 	display: block;
@@ -33,27 +30,23 @@ workshopicon disabled
 	left: 0;
 }
 
-workshopicon.disabled disabled
-{
+workshopicon.disabled disabled {
 	opacity: 0.5;
 }
 
-workshopicon controls
-{
+workshopicon controls {
 	z-index: 10;
 	bottom: -32px;
 	-webkit-transition: bottom 100ms ease-in 0ms;
 }
 
-workshopicon:hover controls
-{
+workshopicon:hover controls {
 	opacity: 1;
 	bottom: 0px;
 	-webkit-transition: bottom 100ms ease-in 200ms;
 }
 
-workshopicon name
-{
+workshopicon name {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -74,8 +67,9 @@ workshopicon name
 	color: #DDD;
 }
 
-workshopicon author, workshopicon votes, workshopicon size
-{
+workshopicon author,
+workshopicon votes,
+workshopicon size {
 	position: absolute;
 	bottom: 0px;
 	right: 0px;
@@ -94,53 +88,48 @@ workshopicon author, workshopicon votes, workshopicon size
 	padding: 3px 6px;
 
 }
-workshopicon size
-{
+
+workshopicon size {
 	top: 22px;
 	bottom: auto;
 	border-radius: 0 0 0 4px;
 }
 
-workshopicon author, workshopicon size
-{
+workshopicon author,
+workshopicon size {
 	right: 0px;
 	-webkit-transition: right 100ms ease-out 200ms;
 }
 
-workshopicon:hover author, workshopicon:hover size
-{
+workshopicon:hover author,
+workshopicon:hover size {
 	right: -200px;
 	-webkit-transition: right 100ms ease-in 0ms;
 }
 
-workshopicon votes
-{
+workshopicon votes {
 	left: 0px;
 	color: #4a4;
 	-webkit-transition: left 100ms ease-out 200ms;
 }
 
-workshopicon votes.negative
-{
+workshopicon votes.negative {
 	color: #a44;
 }
 
-workshopicon:hover votes
-{
+workshopicon:hover votes {
 	left: -200px;
 	-webkit-transition: left 100ms ease-in 0ms;
 }
 
-workshopicon votes
-{
+workshopicon votes {
 	bottom: 0px;
 	right: inherit;
 	border-radius: 0 4px 0 0;
 	color: #DDD !important;
 }
 
-workshopicon description
-{
+workshopicon description {
 	position: absolute;
 	left: 0;
 	top: 0px;
@@ -158,8 +147,7 @@ workshopicon description
 	-webkit-transition: opacity 100ms ease-in 0ms;
 }
 
-workshopicon .checkbox
-{
+workshopicon .checkbox {
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -169,16 +157,14 @@ workshopicon .checkbox
 	width: 19px;
 }
 
-workshopicon:hover description
-{
+workshopicon:hover description {
 	display: inherit;
 
 	opacity: 1;
 	-webkit-transition: opacity 50ms ease-in 0ms;
 }
 
-workshopmessage
-{
+workshopmessage {
 	font-size: 48px;
 	font-weight: bolder;
 	color: #DDD;
@@ -188,14 +174,12 @@ workshopmessage
 }
 
 @media screen and (max-height: 800px) {
-	workshopmessage
-	{
+	workshopmessage {
 		margin: 16px;
 	}
 }
 
-workshopcontainer
-{
+workshopcontainer {
 	position: absolute;
 	left: 0px;
 	top: 64px;
@@ -206,8 +190,7 @@ workshopcontainer
 	padding: 8px;
 }
 
-controls
-{
+controls {
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
@@ -217,8 +200,7 @@ controls
 	overflow: display;
 }
 
-controls control
-{
+controls control {
 	font-size: 11px;
 	display: inline-block;
 	background-color: #333;
@@ -231,18 +213,15 @@ controls control
 	color: #DDD;
 }
 
-controls control IMG
-{
+controls control IMG {
 	padding-top: 3px;
 }
 
-controls control:hover
-{
+controls control:hover {
 	background-color: #666;
 }
 
-.ugc_settings_button
-{
+.ugc_settings_button {
 	height: 44px;
 	width: 44px;
 
@@ -256,13 +235,12 @@ controls control:hover
 	right: 4px;
 	cursor: default;
 }
-.ugc_settings_button:hover
-{
+
+.ugc_settings_button:hover {
 	background: #666;
 }
 
-.ugc_settings
-{
+.ugc_settings {
 	width: 100%;
 
 	padding: 10px;
@@ -278,24 +256,22 @@ controls control:hover
 	visibility: hidden;
 	overflow: hidden;
 }
-.ugc_settings.active
-{
+
+.ugc_settings.active {
 	visibility: visible;
 }
 
-.ugc_settings span
-{
+.ugc_settings span {
 	display: block;
 	font-weight: bold;
 }
-.ugc_settings label
-{
+
+.ugc_settings label {
 	position: relative;
 	top: -2px;
 }
 
-.ugc_settings a
-{
+.ugc_settings a {
 	font-weight: bold;
 	color: #DDD;
 	padding: 4px 15px;
@@ -306,33 +282,30 @@ controls control:hover
 	border-radius: 4px;
 	cursor: default;
 }
-.ugc_settings a:hover
-{
+
+.ugc_settings a:hover {
 	color: #DDD;
 	background: #666;
 }
 
-.ugc_settings_cat
-{
+.ugc_settings_cat {
 	vertical-align: top;
 	display: inline-block;
 	padding: 0px 1%;
 	margin: 0 auto;
 }
 
-.create_preset
-{
+.create_preset {
 	min-width: 350px;
 	color: #DDD;
 }
 
-.preset_content
-{
+.preset_content {
 	min-width: 500px;
 	margin-bottom: 5px;
 }
-.preset_list
-{
+
+.preset_list {
 	background: #222;
 	width: 150px;
 	display: inline-block;
@@ -341,22 +314,22 @@ controls control:hover
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
-.preset_list font
-{
+
+.preset_list font {
 	display: block;
 	padding: 5px;
 	cursor: default;
 }
-.preset_list font:hover
-{
+
+.preset_list font:hover {
 	background: #444;
 }
-.preset_list font.active
-{
+
+.preset_list font.active {
 	background: #666;
 }
-.preset_data
-{
+
+.preset_data {
 	width: 345px;
 	padding-left: 5px;
 	display: inline-block;
@@ -364,29 +337,27 @@ controls control:hover
 	cursor: default;
 }
 
-pagination
-{
+pagination {
 	background-color: #222;
 	border-radius: 4px;
 	margin: 0 auto;
 	padding: 4px 4px;
 	/*white-space: nowrap;*/
 	max-width: 500px;
-	z-index: 64; /* Ensure it is above other elements in case something goes wrong */
+	z-index: 64;
+	/* Ensure it is above other elements in case something goes wrong */
 	color: #DDD;
 }
 
-@media screen and (max-width: 840px)
-{
-	pagination
-	{
+@media screen and (max-width: 840px) {
+	pagination {
 		margin: 0;
 		margin-right: 48px;
 	}
 }
 
-pagination .back, pagination .next
-{
+pagination .back,
+pagination .next {
 	display: block;
 	float: left;
 	background: transparent url('../img/arrow_left.png') no-repeat;
@@ -397,66 +368,70 @@ pagination .back, pagination .next
 	background-position: center center;
 }
 
-pagination .next
-{
+pagination .next {
 	float: right;
 	background-image: url('../img/arrow_right.png');
 }
 
-pagination .pages
-{
+pagination .pages {
 	overflow: hidden;
 	margin-top: 6px;
 }
 
-pagination span.pagenum
-{
+pagination span.pagenum {
 	font-size: 14px;
 }
-pagination a.page
-{
+
+pagination a.page {
 	opacity: 0.5;
 }
-pagination a.page.active
-{
+
+pagination a.page.active {
 	opacity: 1;
 }
 
-workshopicon.installed
-{
+workshopicon.installed {
 	border-color: #676;
 }
-workshopicon.installed name, workshopicon.installed author, workshopicon.installed votes, workshopicon.installed size
-{
+
+workshopicon.installed name,
+workshopicon.installed author,
+workshopicon.installed votes,
+workshopicon.installed size {
 	background: #676;
 }
 
-workshopicon.disabled
-{
+workshopicon.disabled {
 	border-color: #766;
 }
-workshopicon.disabled name, workshopicon.disabled author, workshopicon.disabled votes, workshopicon.disabled size
-{
+
+workshopicon.disabled name,
+workshopicon.disabled author,
+workshopicon.disabled votes,
+workshopicon.disabled size {
 	background: #766;
 }
 
-workshopicon.invalid
-{
+workshopicon.invalid {
 	border-color: #d22;
 }
-workshopicon.invalid name, workshopicon.invalid author, workshopicon.invalid votes, workshopicon.invalid size
-{
+
+workshopicon.invalid name,
+workshopicon.invalid author,
+workshopicon.invalid votes,
+workshopicon.invalid size {
 	background: #d22;
 	color: #fff;
 }
 
-workshopicon.invalid.disabled
-{
+workshopicon.invalid.disabled {
 	border-color: #922;
 }
-workshopicon.invalid.disabled name, workshopicon.invalid.disabled author, workshopicon.invalid.disabled votes, workshopicon.invalid.disabled size
-{
+
+workshopicon.invalid.disabled name,
+workshopicon.invalid.disabled author,
+workshopicon.invalid.disabled votes,
+workshopicon.invalid.disabled size {
 	background: #922;
 	color: #fff;
 }
-
