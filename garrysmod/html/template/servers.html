@@ -77,7 +77,7 @@
 
 	</div>
 
-	<div class="innerpage" ng-hide="CurrentGamemode != null">
+	<div class="innerpage" ng-if="CurrentGamemode == null">
 
 		<h1 class="menuheader">
 			<span ng-tranny="'servers_gamemodes'"></span>
@@ -88,7 +88,7 @@
 
 			<div class="server_gamemodes_inner scrollable">
 				<div class='gamemode {{gamemode.element_class}}'
-					ng-repeat="gamemode in GamemodeList | filter: gamemodeFilter | orderBy:[GMSort, '-(num_players)', 'name' ]"
+					ng-repeat="gamemode in GamemodeList | filter: gamemodeFilter | orderBy:[GMSort, '-(num_players)', 'name' ] track by gamemode.name"
 					ng-click="SelectGamemode( gamemode )">
 
 					<img ng-src='../gamemodes/{{gamemode.name}}/icon24.png' onerror="MissingGamemodeIcon( this )" />
@@ -112,7 +112,7 @@
 				<div class="header">
 					<span ng-tranny="'servers_find_title'"></span>
 					<div class="fav_inputs">
-						<input type="text" ng-model="FindServerString" placeholder="127.0.0.1:27015" />
+						<input type="text" ng-model="$parent.FindServerString" placeholder="127.0.0.1:27015" />
 						<button ng-click="FindServersAtAddress();" ng-tranny="'servers_find'"></button>
 					</div>
 				</div>
@@ -124,7 +124,7 @@
 								ng-click="ToggleFavorite( server );Refresh();$event.stopPropagation();"></a>
 							<!--<img class="flag" ng-src='asset://garrysmod/materials/flags16/{{server.flag}}.png' onerror="MissingFlag( this )" ng-show="server.flag"/> -->
 							<img class="passworded" src='img/server-passworded.png' ng-show="server.pass" />
-							<span>{{ServerName(server)}}</span>
+							<span>{{server.name}}</span>
 						</name>
 						<ping>{{server.ping}}</ping>
 						<players>{{server.players}} / {{server.maxplayers}}</players>
@@ -137,7 +137,7 @@
 
 	</div>
 
-	<div class="innerpage" ng-show="CurrentGamemode != null">
+	<div class="innerpage" ng-if="CurrentGamemode != null">
 
 		<h1 class="menuheader">
 			<span>{{GamemodeName(CurrentGamemode)}}</span>
@@ -171,7 +171,7 @@
 
 					<div id="placeholder_pre" style="height: {{CurrentGamemode.server_offset * 22}}px"></div>
 
-					<div ng-repeat="server in CurrentGamemode.servers | orderBy: CurrentGamemode.OrderBy : CurrentGamemode.OrderReverse | filter: serverFilter | startFrom : CurrentGamemode.server_offset | limitTo : ServersPerPage"
+					<div ng-repeat="server in CurrentGamemode.servers | orderBy: CurrentGamemode.OrderBy : CurrentGamemode.OrderReverse | filter: serverFilter | startFrom : CurrentGamemode.server_offset | limitTo : ServersPerPage track by server.address"
 						class="server {{ ServerClass( server ) }} {{IfElse( CurrentGamemode.Selected == server, 'activeserver', '' )}}"
 						ng-mouseup="SelectServer( server, $event )" ng-dblclick="JoinServer( server )">
 
@@ -179,13 +179,15 @@
 							<a class='favbutton {{IfElse( server.favorite, "favorited", "" )}}'
 								ng-click="ToggleFavorite( server );$event.stopPropagation();"></a>
 							<img class="flag" ng-src='asset://garrysmod/materials/flags16/{{server.flag}}.png'
-								onerror="MissingFlag( this )" ng-show="server.flag" loading="lazy" />
-							<img class="passworded" src='img/server-passworded.png' ng-show="server.pass"
+								onerror="MissingFlag( this )" ng-if="server.flag" loading="lazy" />
+							<img class="passworded" src='img/server-passworded.png' ng-if="server.pass"
 								loading="lazy" />
-							<span>{{ServerName(server)}}
+							<span>{{server.name}}
 								<tag class="{{IfElse( server.version_c > 0, 'future', '' )}}"
-									ng-show="server.version_c != 0">{{IfElse( server.version_c > 0, 'Invalid version',
-									'Outdated' )}}: {{server.version}}</tag>
+									ng-if="server.version_c != 0">
+									<ver_str ng-Tranny="server.version_c > 0 ? 'server_ver_new' : 'server_ver_old'">
+									</ver_str>: {{server.version}}
+								</tag>
 							</span>
 						</name>
 						<lastvisited ng-hide="server.lastplayed == 0">
@@ -207,7 +209,7 @@
 
 			</div>
 
-			<div class='serverinfo' ng-show="CurrentGamemode.Selected">
+			<div class='serverinfo' ng-if="CurrentGamemode.Selected">
 				<span class="closebtn" ng-click="SelectServer( null, $event )"></span>
 				<div>
 
@@ -219,7 +221,7 @@
 					</header>
 
 					<players>
-						<table style="color: #DDD; font-size: 12px; padding: 8px; width: 100%;">
+						<table style="color: #FFF; font-size: 12px; padding: 8px; width: 100%;">
 
 							<tr style="color: #999; font-weight: bold;">
 								<td class="pname" ng-tranny="'playerlist_name'"></td>
@@ -239,10 +241,10 @@
 						<div class="cell" style="padding-top: 5px;">
 							<input type='password' ng-model="CurrentGamemode.Selected.password"
 								ng-show="CurrentGamemode.Selected.pass"
-								ng-keyup="PasswordInput( $event, CurrentGamemode.Selected )" placeholder="Password" />
+								ng-keyup="PasswordInput( $event, CurrentGamemode.Selected )" ng-tranny="'password'" />
 
 							<div ng-show="CurrentGamemode.Selected.players >= CurrentGamemode.Selected.maxplayers">
-								<input type="checkbox" ng-model="JoinIfHasSlot" id="join_if_not_full" />
+								<input type="checkbox" ng-model="$parent.JoinIfHasSlot" id="join_if_not_full" />
 								<label for="join_if_not_full" ng-tranny="'sv_join_if_not_full'"></label>
 							</div>
 

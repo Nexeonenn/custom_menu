@@ -7,9 +7,9 @@ workshopicon {
 	overflow: hidden;
 	background-color: #333;
 	background-position: center;
-	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.5);
 	border-radius: 3px;
-	border: 3px solid #666;
+	border: 3px solid #222;
 }
 
 workshopicon preview {
@@ -52,19 +52,36 @@ workshopicon name {
 	top: 0;
 	right: 0;
 	text-align: left;
-	background-color: #666;
+	background-color: rgba(34, 34, 34, 0.99);
 	font-size: 14px;
-	padding: 2px 5px;
-	padding-bottom: 4px;
 	font-weight: bold;
 	letter-spacing: -1px;
 	z-index: 10;
+	font-family: "Arial";
+	color: #fff;
+	height: 22px;
+}
+
+workshopicon name label {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 2px;
+
+	padding: 2px 0px 4px 2px;
 	cursor: pointer;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	font-family: "Arial";
-	color: #DDD;
+	color: #fff;
+}
+
+workshopicon name.subscription label {
+	right: 24px;
+}
+
+workshopicon.floating name label {
+	right: 2px;
 }
 
 workshopicon author,
@@ -82,8 +99,8 @@ workshopicon size {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	font-family: "Arial";
-	color: #DDD;
-	background-color: #666;
+	color: #fff;
+	background-color: #222;
 	border-radius: 4px 0 0 0;
 	padding: 3px 6px;
 
@@ -109,12 +126,12 @@ workshopicon:hover size {
 
 workshopicon votes {
 	left: 0px;
-	color: #4a4;
+	color: #6c6;
 	-webkit-transition: left 100ms ease-out 200ms;
 }
 
 workshopicon votes.negative {
-	color: #a44;
+	color: #c66;
 }
 
 workshopicon:hover votes {
@@ -126,7 +143,6 @@ workshopicon votes {
 	bottom: 0px;
 	right: inherit;
 	border-radius: 0 4px 0 0;
-	color: #DDD !important;
 }
 
 workshopicon description {
@@ -135,13 +151,13 @@ workshopicon description {
 	top: 0px;
 	bottom: 0px;
 	right: 0;
-	text-align: justify;
-	background-color: #777;
-	font-size: 11x;
+	text-align: left;
+	background-color: rgba(34, 34, 34, 0.95);
+	font-size: 11px;
 	padding: 32px 8px;
 	color: #fff;
 	cursor: default;
-	word-break: break-all;
+	word-break: break-word;
 
 	opacity: 0;
 	-webkit-transition: opacity 100ms ease-in 0ms;
@@ -167,7 +183,7 @@ workshopicon:hover description {
 workshopmessage {
 	font-size: 48px;
 	font-weight: bolder;
-	color: #DDD;
+	color: #999;
 	text-align: center;
 	display: block;
 	margin: 64px;
@@ -188,6 +204,7 @@ workshopcontainer {
 	background-color: #111;
 	border-radius: 3px;
 	padding: 8px;
+	border: 1px solid #333;
 }
 
 controls {
@@ -203,14 +220,14 @@ controls {
 controls control {
 	font-size: 11px;
 	display: inline-block;
-	background-color: #333;
+	background-color: #444;
 	padding: 2px 4px;
 	border-radius: 2px;
 	cursor: pointer;
 	height: 15px;
 	-webkit-box-shadow: 1px 1px 2px black;
 	position: relative;
-	color: #DDD;
+	color: #fff;
 }
 
 controls control IMG {
@@ -221,14 +238,22 @@ controls control:hover {
 	background-color: #666;
 }
 
+
+controls control.disabled {
+	background-color: #222;
+	cursor: default;
+	color: #666;
+}
+
 .ugc_settings_button {
 	height: 44px;
 	width: 44px;
 
 	padding: 6px;
-	background: #444;
+	background: #222;
 	border-radius: 4px;
 	box-sizing: border-box;
+	border: 1px solid #444;
 
 	position: absolute;
 	bottom: 4px;
@@ -237,21 +262,22 @@ controls control:hover {
 }
 
 .ugc_settings_button:hover {
-	background: #666;
+	background: #333;
 }
 
 .ugc_settings {
 	width: 100%;
 
 	padding: 10px;
-	background: #222;
-	color: DDD;
+	background: #111;
 
 	z-index: 128;
 	position: absolute;
 	bottom: 52px;
 	left: 0;
 	box-sizing: border-box;
+	border: 1px solid #333;
+	border-bottom: none;
 
 	visibility: hidden;
 	overflow: hidden;
@@ -264,28 +290,35 @@ controls control:hover {
 .ugc_settings span {
 	display: block;
 	font-weight: bold;
+	color: #fff;
 }
 
 .ugc_settings label {
 	position: relative;
 	top: -2px;
+	color: #ccc;
 }
 
 .ugc_settings a {
 	font-weight: bold;
-	color: #DDD;
+	color: #fff;
 	padding: 4px 15px;
-	background: #444;
+	background: #222;
 	display: block;
 	margin-top: 2px;
 	text-align: center;
 	border-radius: 4px;
 	cursor: default;
+	min-width: 140px;
+	border: 1px solid #333;
 }
 
 .ugc_settings a:hover {
-	color: #DDD;
-	background: #666;
+	background: #333;
+}
+
+.ugc_settings a:active {
+	background: #1a1a1a;
 }
 
 .ugc_settings_cat {
@@ -297,48 +330,65 @@ controls control:hover {
 
 .create_preset {
 	min-width: 350px;
-	color: #DDD;
 }
 
 .preset_content {
+	max-height: 400px;
+	min-height: 290px;
 	min-width: 500px;
 	margin-bottom: 5px;
+	display: -webkit-box;
+}
+
+.preset_side {
+	width: 150px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+
+.preset_side input[type="text"] {
+	padding: 2px 4px;
+	box-sizing: border-box;
+	margin-bottom: 8px;
+	margin-right: 8px;
+	display: block;
+	background-color: #222;
+	border: 1px solid #444;
+	color: #fff;
 }
 
 .preset_list {
 	background: #222;
-	width: 150px;
-	display: inline-block;
-	max-height: 400px;
-	min-height: 230px;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	-webkit-box-flex: 1;
+	border: 1px solid #333;
 }
 
 .preset_list font {
 	display: block;
 	padding: 5px;
 	cursor: default;
+	color: #fff;
 }
 
 .preset_list font:hover {
-	background: #444;
+	background: #333;
 }
 
 .preset_list font.active {
-	background: #666;
+	background: #444;
 }
 
 .preset_data {
-	width: 345px;
+	-webkit-box-flex: 1;
 	padding-left: 5px;
-	display: inline-block;
-	vertical-align: top;
 	cursor: default;
+	color: #fff;
 }
 
 pagination {
-	background-color: #222;
+	background-color: #111;
 	border-radius: 4px;
 	margin: 0 auto;
 	padding: 4px 4px;
@@ -346,7 +396,7 @@ pagination {
 	max-width: 500px;
 	z-index: 64;
 	/* Ensure it is above other elements in case something goes wrong */
-	color: #DDD;
+	border: 1px solid #333;
 }
 
 @media screen and (max-width: 840px) {
@@ -363,9 +413,15 @@ pagination .next {
 	background: transparent url('../img/arrow_left.png') no-repeat;
 	width: 48px;
 	height: 36px;
-	background-color: #444;
+	background-color: #222;
 	border-radius: 3px;
 	background-position: center center;
+	border: 1px solid #444;
+}
+
+pagination .back:hover,
+pagination .next:hover {
+	background-color: #333;
 }
 
 pagination .next {
@@ -376,62 +432,68 @@ pagination .next {
 pagination .pages {
 	overflow: hidden;
 	margin-top: 6px;
+	color: #fff;
 }
 
 pagination span.pagenum {
 	font-size: 14px;
+	color: #fff;
 }
 
 pagination a.page {
 	opacity: 0.5;
+	color: #fff;
 }
 
 pagination a.page.active {
 	opacity: 1;
+	color: #fff;
 }
 
 workshopicon.installed {
-	border-color: #676;
+	border-color: #1a4d1a;
 }
 
 workshopicon.installed name,
 workshopicon.installed author,
 workshopicon.installed votes,
 workshopicon.installed size {
-	background: #676;
+	background: #1a4d1a;
+	color: #fff;
 }
 
 workshopicon.disabled {
-	border-color: #766;
+	border-color: #444;
 }
 
 workshopicon.disabled name,
 workshopicon.disabled author,
 workshopicon.disabled votes,
 workshopicon.disabled size {
-	background: #766;
+	background: #333;
+	color: #999;
 }
 
 workshopicon.invalid {
-	border-color: #d22;
+	border-color: #8b0000;
 }
 
 workshopicon.invalid name,
 workshopicon.invalid author,
 workshopicon.invalid votes,
 workshopicon.invalid size {
-	background: #d22;
+	background: #8b0000;
 	color: #fff;
 }
 
 workshopicon.invalid.disabled {
-	border-color: #922;
+	border-color: #4d0000;
 }
 
 workshopicon.invalid.disabled name,
 workshopicon.invalid.disabled author,
 workshopicon.invalid.disabled votes,
 workshopicon.invalid.disabled size {
-	background: #922;
-	color: #fff;
+	background: #4d0000;
+	color: #999;
 }
