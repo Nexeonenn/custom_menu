@@ -2,7 +2,7 @@
 
 ### Как установить?
 
-- Скачиваем [релизную версию](https://github.com/Nexeonenn/custom_menu/releases/latest) установщика.
+- Скачиваем [актуальную версию](https://github.com/Nexeonenn/custom_menu/archive/refs/heads/installer.zip) установщика.
 - Открываем его и ждём окончания установки.
 - Радуемся жизни!
 
